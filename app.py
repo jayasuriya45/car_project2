@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
   
-with open(r'D:\car_prediction\Rf_model.pkl', 'rb') as f:
+with open(r'D:\car_prediction\rf_model.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
 
 
@@ -112,5 +112,6 @@ with open(r'D:\\car_prediction\rf_model.pkl', 'rb') as f:
 if st.button("🔍 Predict Price"):
     prediction = model.predict(X_input)
     st.success(f"Predicted Car Price: ₹{prediction[0]:,.2f}")
+
 
 
